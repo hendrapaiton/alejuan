@@ -17,8 +17,8 @@ def main(page: ft.Page):
     page.scroll = ft.ScrollMode.AUTO
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
-    page.window.width = 360
-    page.window.height = 720
+    page.window.width = 350
+    page.window.height = 700
     page.window.resizable = False
 
     state = AppState(count=0)
@@ -26,6 +26,7 @@ def main(page: ft.Page):
     page.floating_action_button = ft.FloatingActionButton(
         icon=ft.Icons.ADD, on_click=state.increment
     )
+
     page.add(
         ft.ControlBuilder(
             state,
